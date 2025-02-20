@@ -1,0 +1,19 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "CareYourSkin";
+}
+<h1>Welcome to the CareYouSkin </h1>
+@if (HttpContextAccessor.HttpContext.Session.GetString("Role") == "User")
+{
+    <h3>Hello, Welcome  @HttpContextAccessor.HttpContext.Session.GetString("Username")! You are logged in as a <b>User</b></h3>
+    
+}
+else if(HttpContextAccessor.HttpContext.Session.GetString("Role") == "Expert")
+{
+   <p>***************User panel********</p>
+    <h3>Hello, Welcome  @HttpContextAccessor.HttpContext.Session.GetString("Username")! You are logged in as a <b>User</b></h3>
+    
+}
+else{
+     <p>Opps!!Please log in or register to continue.</p>
+}
