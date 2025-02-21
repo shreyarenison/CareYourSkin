@@ -29,17 +29,15 @@ dotnet restore
 ```
 
 ### **4. Set Up Database**  
-- Configure **appsettings.json** with your database connection string.  
-- Run migrations:  
+- Open **Package Manager Console** in Visual Studio.  
+- Run the following command:  
 ```bash
-dotnet ef database update
+update-database
 ```
 
 ### **5. Run the Project**  
-```bash
-dotnet run
-```
-The application will be available at `http://localhost:5000/`.
+- Click on the **Run** button in Visual Studio.  
+- The application will automatically open in your default web browser at `http://localhost:7020/`.
 
 ---
 
